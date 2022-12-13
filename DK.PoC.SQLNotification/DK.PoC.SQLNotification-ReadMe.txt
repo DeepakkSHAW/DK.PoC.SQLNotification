@@ -1,4 +1,4 @@
-﻿DK.PoC.SQLNotification
+DK.PoC.SQLNotification
 ----------------------
 This Azure function (not a isolated function) triggered from SQL Table operations.
 Steps:
@@ -28,4 +28,13 @@ INSERT INTO TUser (first_name, last_name) values ('Rupam', 'Shaw')
 INSERT INTO TUser (first_name, last_name) values ('Janu', 'love')
 Update TUser SET [phone] = '1234' where user_id = 6
 
-
+local.settings.json
+------------------------
+{
+    "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "SQLDBConnection": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=IOTech;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+  }
+}
