@@ -1,0 +1,31 @@
+﻿DK.PoC.SQLNotification
+----------------------
+This Azure function (not a isolated function) triggered from SQL Table operations.
+Steps:
+Add nuGet package
+- microsoft.Azure.webjobs.extensions.sql (preview as on Dated: Dec'22)
+
+Create SQL Table on local SQLDB, some TSQL given below:
+-------------------------------------------------------
+- Create Table
+CREATE TABLE TUser (
+    user_id INT PRIMARY KEY IDENTITY (1, 1),
+    first_name VARCHAR (50) NOT NULL,
+    last_name VARCHAR (50) NOT NULL,
+    phone VARCHAR(20)
+);
+
+-Run below TSQL on the database and Table
+ALTER DATABASE IOTech SET change_tracking = on (change_retention = 2 days, auto_cleanup = on)
+ALTER TABLE "TUser" enable change_tracking
+
+Test TSQL scripts
+-----------------
+select * from TUser
+INSERT INTO TUser (first_name, last_name) values ('Durga', 'Prasad')
+INSERT INTO TUser (first_name, last_name) values ('Jagruti', 'Shaw')
+INSERT INTO TUser (first_name, last_name) values ('Rupam', 'Shaw')
+INSERT INTO TUser (first_name, last_name) values ('Janu', 'love')
+Update TUser SET [phone] = '1234' where user_id = 6
+
+

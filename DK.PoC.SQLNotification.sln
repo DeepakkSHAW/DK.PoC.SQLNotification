@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DK.PoC.SQLNotification", "DK.PoC.SQLNotification\DK.PoC.SQLNotification.csproj", "{4C821157-7007-44ED-B9AC-FB0FE5B7DEA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C821157-7007-44ED-B9AC-FB0FE5B7DEA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C821157-7007-44ED-B9AC-FB0FE5B7DEA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C821157-7007-44ED-B9AC-FB0FE5B7DEA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C821157-7007-44ED-B9AC-FB0FE5B7DEA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42124444-F130-41AD-A144-C42E2C48E43B}
+	EndGlobalSection
+EndGlobal
